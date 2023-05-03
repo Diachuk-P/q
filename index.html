@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/customSelect.css">
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar__logo">
+                    <img src="assets/img/Group59.png" alt="">
+                </div>
+                <div class="navbar__menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__item-link">Commission</a></li>
+                        <li class="menu__item"><a class="menu__item-link">About Koolabet Casino</a></li>
+                        <li class="menu__item"><a class="menu__item-link">FAQ</a></li>
+                        <li class="menu__item"><a class="menu__item-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar__btn-wrapper">
+                    <div class="btn btn-sign-up">
+                        <button>
+                            + Sign Up
+                        </button>
+                    </div>
+                    <div class="btn log-in">
+                        <button>
+                            log in
+                        </button>
+                    </div>
+                    <div class="lang language-switcher-wrapper">
+                        <div class="language-switcher">
+                            <span class="language-switcher__icon language-list__icon flag-icon flag-icon-gb"></span>
+                            <!-- is-active -->
+                            <ul class="language-list d-none">
+                                <li class="language-list__item d-flex">
+                                    <span class="language-list__icon flag-icon flag-icon-squared flag-icon-gb"></span>
+                                    <span class="language-list__text">English</span>
+                                </li>
+                                <li class="language-list__item">
+                                    <span class="language-list__icon flag-icon flag-icon-squared flag-icon-ru"></span>
+                                    <span class="language-list__text">Russian</span>
+                                </li>
+                                <li class="language-list__item">
+                                    <span class="language-list__icon flag-icon flag-icon-squared flag-icon-jp"></span>
+                                    <span class="language-list__text">Japanese</span>
+                                </li>
+                            </ul>
+                            <!-- <div class="center">
+                                <select name="changeLang" id="changeLang" class="select-lang sources" placeholder="Source Type">
+                                  <option value="profile">Profile</option>
+                                  <option value="word">Word</option>
+                                  <option value="hashtag">Hashtag</option>
+                                </select>
+                              </div> -->
+                            <!-- <img src="assets/img/Rectangle468.png" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+    <div class="modal-forms" style="display: none">
+        <div data-close class="modal__close"></div>
+        <div class="form-wrapper form-modal-window">
+            <div class="form form_sign-up">
+                <form id="log-in-form" class="form-log-in d-none form_modal">
+                    <div class="form-group-title">
+                        <h4>Log in</h4>
+                    </div>
+                    <div class="form-group-close">
+                        <span class="close-btn-form"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address<span style="color: #FFAC60">*</span></label>
+                        <input type="email" class="form-control" id="email3" aria-describedby="emailHelp"
+                            placeholder="mail@mail.com" pattern="^\S+@\S+\.\S+$">
+                        <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+                        <small>Error</small>
+
+                    </div>
+                    <div class="form-group" style="position: relative;">
+                        <label for="exampleInputPassword1">Password<span style="color: #FFAC60">*</span></label>
+                        <input type="password" id="passwordLog" class="form-control" placeholder="Password">
+                        <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+
+                        <small>Error</small>
+
+                        <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                        <!-- <div class="rorm-group error d-flex align-items-center">
+                            <img src="assets/img/error.svg" alt="">
+                            <span>The Email field is required</span>
+                        </div> -->
+
+                    </div>
+                    <div class="forgot_password">
+                        <span class="btn-forgot_password">Forgop Password</span>
+
+                    </div>
+                    <div class="form-group name">
+                        <label>If you have 2FA enabled, please enter the code below:
+                        </label>
+                        <input type="name" class="form-control input-color" id="name" aria-describedby="emailHelp"
+                            placeholder="Your code here">
+                        <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+                        <small>Error</small>
+                    </div>
+                    <div class="form-group d-flex justify-content-center">
+                        <button type="submit" class=" w-40 btn btn-primary btn-color " id="btnLogInModal">Log
+                            in</button>
+                    </div>
+                    <div class="form-group d-flex justify-content-center signUp-login-link">
+                        <span>Don't have an account? </span><span
+                            style="color: #4075FF; cursor: pointer; margin-left: 5px;"
+                            class="btn-sign-up-logInForm">Sign Up</span>
+                    </div>
+
+                </form>
+                <form id="reser-password-form" class="rofgot_password form_modal d-none">
+                    <div class="form-group-title">
+                        <h4>Forgot Password</h4>
+                    </div>
+                    <div class="form-group-subtitle">
+                        <span>Fill in your e-mail address and we will send you instructions on how to reset your
+                            password via e-mail.
+                        </span><br>
+
+                    </div>
+                    <div class="form-group-subtitle" style="margin-top: 5px;">
+                        <span>Contact us via Support if you need further help.</span>
+                    </div>
+                    <div class="form-group-close">
+                        <span class="close-btn-form"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address<span style="color: #FFAC60">*</span></label>
+                        <div class="wrapper-input"><input type="email" class="form-control" id="email4"
+                                aria-describedby="emailHelp" placeholder="mail@mail.com" pattern="^\S+@\S+\.\S+$">
+                            <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+                            <small>Error</small>
+                        </div>
+                        <div class="error-wrapper d-flex d-none">
+                            <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+                            <small>Error</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group d-flex justify-content-center">
+                        <button type="submit" class=" w-40 btn btn-primary btn-color " id="btnReserPassword">Reset
+                            Password</button>
+                    </div>
+                    <div class="form-group d-flex justify-content-center signUp-login-link">
+                        <span>Already a member?</span><span style="color: #4075FF; cursor: pointer; margin-left: 5px;"
+                            class="smallBtnLinkLogIn">Log in</span>
+                    </div>
+
+                </form>
+                <form id="sign-up-form" class="sign-up d-none form_modal">
+                    <div class="form-group-title">
+                        <h4>Sign Up</h4>
+                    </div>
+                    <div class="form-group-close">
+                        <span class="close-btn-form"></span>
+                    </div>
+                    <div class="form-group select">
+                        <label for="exampleFormControlSelect1"> How can we contact you?<span
+                                style="color: #FFAC60">*</span></label>
+                        <select name="sources" id="sources" class="custom-select sources"
+                            placeholder="Choose one option">
+                            <option value=""></option>
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="skype">Skype</option>
+                            <option value="telegram">Telegram</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group d-none whatsapp-number-form">
+                        <label for="exampleFormControlTextarea1">Enter your phone number<span
+                                style="color: #FFAC60">*</span></label>
+                        <div class="wrapper-input">
+                            <input class="form-control whatsapp-number-input" type="text" placeholder="Your number"
+                                id="tel" name="name">
+                        </div>
+                        <div class="error-wrapper d-flex d-none">
+                            <img id="errorImg" src="assets/img/error.svg" alt="" class="">
+                            <span>The Phone field is required</span>
+                        </div>
+                    </div>
+                    <div class="form-group d-none skype-form">
+                        <label for="exampleFormControlTextarea1">
+                            Enter your Skype username
+                            <span style="color: #FFAC60">*</span></label>
+                        <div class="wrapper-input">
+                            <input class="form-control skype-input" type="text" placeholder="Skype username">
+                        </div>
+                        <div class="error-wrapper d-flex d-none">
+                            <img id="errorImg" src="assets/img/error.svg" alt="" class="">
+                            <span>The Skype field is required</span>
+                        </div>
+                    </div>
+                    <div class="form-group d-none telegram-form">
+                        <label for="exampleFormControlTextarea1">Enter your Telegram
+                            <span style="color: #FFAC60">*</span></label>
+                        <div class="wrapper-input">
+                            <input class="form-control telegram-input" type="text" placeholder="Your Telegram">
+                        </div>
+                        <div class="error-wrapper d-flex d-none">
+                            <img id="errorImg" src="assets/img/error.svg" alt="" class="">
+                            <span>The Skype field is required</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="exampleFormControlTextarea1">Where are you planning to promote Koolabets?<span
+                                style="color: #FFAC60">*</span></label>
+                        <div class="wrapper-input">
+                            <input class="form-control promote-input" type="text" placeholder="Your answer" min="5">
+
+
+                        </div>
+                        <div class="error-wrapper d-flex d-none">
+                            <img id="errorImg" src="assets/img/error.svg" alt="" class="">
+                            <span>You didn't answer</span>
+                        </div>
+                        <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea> -->
+                    </div>
+                    <div class="form-group d-flex justify-content-center">
+                        <button class="btn-color btn_form" id="continue-modal">
+                            Continue
+                            <!-- <img src="assets/img/arrow_right.svg" alt=""> -->
+                            <!-- <i class="fa-solid fa-arrow-right"></i> -->
+                        </button>
+
+                    </div>
+                    <div class="form-group d-flex justify-content-center signUp-login-link">
+                        <span>Already a member?</span><span style="color: #4075FF; cursor: pointer; margin-left: 5px;"
+                            class="smallBtnLinkLogIn">Log in</span>
+                    </div>
+                </form>
+                <form id="additional-form" class="d-none form_modal">
+                    <div class="form-group-title">
+                        <h4>Additional info</h4>
+                    </div>
+                    <div class="form-group-close">
+                        <span class="close-btn-form"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address<span style="color: #FFAC60">*</span></label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="mail@mail.com" pattern="^\S+@\S+\.\S+$">
+                        <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+                        <small>Error</small>
+
+                    </div>
+                    <div class="form-group" style="position: relative;">
+                        <label for="exampleInputPassword1">Password<span style="color: #FFAC60">*</span></label>
+                        <input type="password" id="password" class="form-control" placeholder="Password">
+                        <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+                        <small>Error</small>
+
+                        <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                        <!-- <div class="rorm-group error d-flex align-items-center">
+                            <img src="assets/img/error.svg" alt="">
+                            <span>The Email field is required</span>
+                        </div> -->
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                        <label class="form-check-label" for="exampleCheck1">I agree to the Terms & Conditions</label>
+                    </div>
+                    <div class="form-group d-flex justify-content-center">
+                        <button type="submit" class=" w-40 btn btn-primary btn-color " id="signupsec">Sign up</button>
+                    </div>
+                    <div class="form-group d-flex justify-content-center signUp-login-link">
+                        <span>Already a member?</span><span style="color: #4075FF; cursor: pointer; margin-left: 5px;"
+                            class="smallBtnLinkLogIn">Log in</span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <section class="affiliate_program">
+        <div class="container"">
+            <div class=" affiliate_program__title">
+            <h1 style="margin-top: 50px; margin: 0 auto">KOOLABETS AFFILIATE PROGRAM</h1>
+        </div>
+        <div class="affiliate_program__subtitle">
+            <p>Make money by referring people to koolabets.com</p>
+        </div>
+
+        </div>
+        <div class="container">
+            <form action="" class="affiliate-form" id="affiliate-form">
+                <div class="affiliate-form__title"><span>I want to earn monthly:</span></div>
+                <div class="affiliate-amount-wrapper d-flex justify-content-between ">
+                    <div class="input-currency d-flex "><span class="affiliate-amount-content__symbol form-affiliate">€
+                        </span>
+                        <div class="affiliate-form__input form-affiliate"><input placeholder="1,000" type="number"
+                                style="border: none;" id="inputAffiliate" maxlength="10">
+                        </div>
+                    </div>
+
+                    <div class="form-group select">
+                        <select name="sources" id="sources" class="custom-select sources" placeholder="EUR">
+                            <option value="eur">EUR</option>
+                            <option value="usd">USD</option>
+                            <option value="btc">BTC</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="affiliate-form__profit d-flex justify-content-between w-100">
+                    <div class="affiliate-form__profit-text">
+                        <span>Casino Profit Required</span>
+                    </div>
+                    <div class="affiliate-form__profit_value">
+                        <span id="profit_value">4,000</span><span class="affiliate-amount-content__symbol"> €</span>
+                    </div>
+                </div>
+                <div class="affiliate-form__commision-plan">
+                    <div class="affiliate-form__commision-plan-text">
+                        <span>Commission Plan</span>
+                    </div>
+                    <div class="affiliate-form__commision-plan-value">
+                        <span id="profit_rate">25</span> <span>%</span>
+                    </div>
+                </div>
+                <div class="affiliate-form__button">
+                    <button class="commision-cta" id="commision-cta">
+                        <div class="button_title">
+                            <span>START EARNING <span class="affiliate-amount-content__symbol">€</span> <span id="btn_profit_value">1,000</span> MONTHLY</span>
+                        </div>
+                        <span>It only takes one minute to sign up</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="affiliate-actions-container-wrapper">
+
+
+            <div class="container">
+                <div class="affiliate-actions-container_block">
+                    <div class="affiliate-actions-container join">
+                        <div class="affiliate-actions-container__img"><img src="assets/img/Group17.png" alt=""></div>
+                        <div class="affiliate-actions-container__title">
+                            <h4>JOIN</h4>
+                        </div>
+                        <div class="affiliate-actions-container__info">
+                            <p>Join for free in just 1 minute and get a dedicated account manager to help you.
+                            </p>
+                        </div>
+                        <div class="affiliate-actions-container__links"><a href="#">Learn more</a></div>
+                    </div>
+                    <div class="affiliate-actions-container">
+                        <div class="affiliate-actions-container__img"><img src="assets/img/Group16.png" alt=""></div>
+                        <div class="affiliate-actions-container__title">
+                            <h4>ADVERTISE</h4>
+                        </div>
+                        <div class="affiliate-actions-container__info">
+                            <p>Refer players to Koolabets and on which you get up to 40% profit lifetime!
+                            </p>
+                        </div>
+                        <div class="affiliate-actions-container__links"><a href="#">Learn more</a></div>
+                    </div>
+                    <div class="affiliate-actions-container">
+                        <div class="affiliate-actions-container__img"><img src="assets/img/Group15.png" alt=""></div>
+                        <div class="affiliate-actions-container__title">
+                            <h4>EARN</h4>
+                        </div>
+                        <div class="affiliate-actions-container__info">
+                            <p>Get paid on the 1st in every month with no negative carry over.
+                            </p>
+                        </div>
+                        <div class="affiliate-actions-container__links"><a href="#">Learn more</a></div>
+                    </div>
+                </div>
+
+
+                <div class="affiliate-actions-container__modal d-none">
+                    <div class="affiliate-modal-wrapper">
+                        <div class="affiliate-modal__header">
+                            <nav class="affiliate-modal__nav d-flex">
+                                <button class="affiliate-modal__nav-tab">Join</button>
+                                <button class="affiliate-modal__nav-tab">ADVERTISE</button>
+                                <button class="affiliate-modal__nav-tab">EARN</button>
+                            </nav>
+                        </div>
+
+                        <div class="affiliate-modal__content ">
+                            <div class="affiliate-modal__content-join d-none">
+                                <div class="jae-content__heading">
+                                    <h3 class="jae-content__heading-title">JOIN BITSTARZ AFFILIATE PROGRAM</h3>
+                                    <span class="jae-content__heading-text">Creating an affiliate account with BitStarz
+                                        is easy. Simply follow the below steps and you'll be set up in no time</span>
+                                </div>
+                                <div class="content__box">
+                                    <h5>
+                                        Step 1
+                                    </h5>
+                                    <p>Register an affiliate account Click here to get started.</p>
+                                    <img src="assets/img/join-step-one.66f5c7b.jpg" alt="">
+                                </div>
+                                <div class="content__box">
+                                    <h5>
+                                        Step 2
+                                    </h5>
+                                    <p>Once logged in, go to Campaigns > Create Campaign and create your first campaign
+                                    </p>
+                                    <img src="assets/img/join-step-two.aef22f6.jpg" alt="">
+                                </div>
+                                <div class="content__box">
+                                    <h5>
+                                        STEP 3
+                                    </h5>
+                                    <p>After you created the campaign, you can preview and track it in Campaigns > My
+                                        Campaigns.</p>
+                                    <img src="assets/img/join-step-three.eef9a4e.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="affiliate-modal__content-advertise">
+                                <div class="jae-content__heading">
+                                    <h3 class="jae-content__heading-title">ADVERTISE WITH BITSTARZ</h3>
+                                    <span class="jae-content__heading-text">Refer players to BitStarz and on which you
+                                        get up to 40% profit lifetime!</span>
+                                </div>
+                                <div class="content__box d-flex">
+                                    <img src="assets/img/advertise-star.49e147b.svg" alt="">
+                                    <div class="content-advertise-info">
+                                        <h5 class="jae-content__box-title">
+                                            BANNERS
+                                        </h5>
+                                        <p class="jae-content__box-text">Spice up your Twitch stream or website with a
+                                            fresh and popping BitStarz banner. Not only will it beautify your site but
+                                            it will show that you are working with the best in the biz and help you get
+                                            that affiliate dinero. Just give us your preferred dimensions and let us
+                                            work our magic!</p>
+
+                                    </div>
+
+                                </div>
+                                <div class="content__box d-flex">
+                                    <img src="assets/img/advertise-thumb.b3fd0af.svg" alt="">
+                                    <div class="content-advertise-info">
+                                        <h5 class="jae-content__box-title">
+                                            WRITE A REVIEW ABOUT BITSTARZ
+                                        </h5>
+                                        <p class="jae-content__box-text">In order to promote us in the best way
+                                            possible, it’s important to have a solid review. Present and inform your
+                                            players why they should play at BitStarz and how they can get the most out
+                                            of their experience. If you have any questions, please let us know and we
+                                            can help you.</p>
+
+                                    </div>
+
+                                </div>
+                                <div class="content__box d-flex">
+                                    <img src="assets/img/advertise-video.fb80bce.svg" alt="">
+                                    <div class="content-advertise-info">
+                                        <h5 class="jae-content__box-title">
+                                            MAKE A YOUTUBE VIDEO
+                                        </h5>
+                                        <p class="jae-content__box-text">Making a youtube video can be a fun and very
+                                            effective way of promotion. Humor and excitement are really good ways of
+                                            getting a message across so remember that a smile is very contagious. After
+                                            all, you want people to both watch and remember it.</p>
+
+                                    </div>
+
+                                </div>
+                                <div class="content__box d-flex">
+                                    <img src="assets/img/advertise-video.fb80bce.svg" alt="">
+                                    <div class="content-advertise-info">
+                                        <h5 class="jae-content__box-title">
+                                            SHARE ON FACEBOOK AND TWITTER
+                                        </h5>
+                                        <p class="jae-content__box-text">The more you promote us the greater your
+                                            opportunities will be. We highly recommend sharing info and posts via
+                                            Facebook, Twitter or any other social media to the world and to your
+                                            friends. In other words, go crazy!</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="affiliate-modal__content-advertise d-none">
+                                <div class="jae-content__heading">
+                                    <h3 class="jae-content__heading-title">EARN</h3>
+                                    <span class="jae-content__heading-text">Get paid on the 1st in every month with no
+                                        negative carry over.</span>
+                                </div>
+                                <div class="content__box">
+
+                                    <div class="content-advertise-info">
+                                        <p class="jae-content__box-text">Access to an advanced multi-currency reporting
+                                            tool with in-depth customisation. Check Graphical dashboards that bring
+                                            together the most important and relevant data.</p>
+
+                                    </div>
+                                    <img src="assets/img/earn-banner.41fa48e.jpg" alt="">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section id="commission" class="commission">
+        <div class="commission-heading">
+            <div class="commission-heading__title">
+                <h2>COMMISSION PLAN</h2>
+            </div>
+            <div class="commission-heading__subtitle">
+                <span>Based on casino profit your players generate per month</span>
+            </div>
+        </div>
+        <div class="commission__content is_eur">
+            <div class="commission-currencies">
+                <button type="button" class="commission-currencies__btn is_eur  is-active">EUR</button>
+                <button type="button" class="commission-currencies__btn is_usd ">USD</button>
+                <button type="button" class="commission-currencies__btn is_btc ">BTC</button>
+
+            </div>
+        </div>
+
+        <div class="commission-graph-mobile d-none">
+            <div class="commission-graph-mobile-wrapper">
+                <div class="commission-graph__box">
+                    <span class="commission-graph__percent">25%</span>
+                    <span class="commission-graph__limit">
+                        <5000 EUR</span>
+                </div>
+                <div class="commission-graph__box">
+                    <span class="commission-graph__percent">30%</span>
+                    <span class="commission-graph__limit">5000 to 10000 EUR</span>
+                </div>
+                <div class="commission-graph__box">
+                    <span class="commission-graph__percent">35%</span>
+                    <span class="commission-graph__limit">1000 to 20000 EUR</span>
+                </div>
+                <div class="commission-graph__box">
+                    <span class="commission-graph__percent">40%</span>
+                    <span class="commission-graph__limit">20000 EUR+</span>
+                </div>
+            </div>
+        </div>
+        <div class="commission-cta  d-flex flex-column justify-content-center align-items-center">
+            <button class="commission-cta__btn">
+                <span class="commission-cta__btn-title">Get Started</span>
+            </button>
+            <button class="commission-cta__link">Affiliate Terms & Conditions</button>
+        </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <section class="about_content" id="about">
+        <div class="container">
+            <div class="about">
+                <div class="title_wrapper d-flex flex-column justify-content-center align-items-center">
+                    <div class="about__title">
+                        <h2>ABOUT KOOLABETS</h4>
+
+                    </div>
+                    <div class="about__subtitle subtitle-main-title">
+                        <span>KOOLABETS is the high-quality user friendly gambling website offering its clients
+                            outstanding experience through hundreds of games and professional team.</span>
+                    </div>
+                </div>
+
+                <!-- d-flex align-items-center align-self-center -->
+                <div class="about__stats">
+                    <div class="stats">
+                        <div class="stats__cards minutes d-flex justify-content-center align-items-center flex-column">
+                            <span class="stats__card-text">10 MINUTES</span>
+                            <span class="stats__card-label">Average Cash Out Time</span>
+                        </div>
+                        <div class="stats__cards days d-flex justify-content-center align-items-center flex-column">
+                            <span class="stats__card-text">24/7</span>
+                            <span class="stats__card-label">Live Chat Support</span>
+                        </div>
+                        <div class="stats__cards games d-flex justify-content-center align-items-center flex-column">
+                            <span class="stats__card-text">3,200+</span>
+                            <span class="stats__card-label">Casino Games</span>
+                        </div>
+                        <div class="stats__cards players d-flex justify-content-center align-items-center flex-column">
+                            <span class="stats__card-text">2,700,000+</span>
+                            <span class="stats__card-label">Registered Players</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="about__info">
+                    <div class="info">
+                        <div class="info__text-wrapper">
+                            <div class="info__text-wrapper-inner">
+                                <div class="info__text-container">
+                                    <p class="info__title">PRODUCT</p>
+                                    <p class="info__text">Slots, Live Casino, Table Games.</p>
+                                </div>
+                                <div class="info__text-container">
+                                    <p class="info__title">SOFTWARE</p>
+                                    <p class="info__text">We are offering a customized software for the best player
+                                        experience. Besides that our player enjoy playing a wide range of top gaming
+                                        providers, such as: 1Spin4Win, 5Men, 7Mojos, Amatic, Arrow’s Edge, Avatar UX,
+                                        BBTech, BetGames, Booongo, BGaming, Belatra, Booming Games, Betsoft, Caleta,
+                                        Evolution Gaming, Endorphina, Eurasian Gaming, Gamezix, iSoftBet, Leap, Mascot,
+                                        Nucleus Gaming, Platipus, Playson, Spinomenal, Red Rake, Vivo Gaming, Wazdan,
+                                        YeeBet.
+                                    </p>
+                                </div>
+                                <div class="info__text-container">
+                                    <p class="info__title">PAYMENT METHODS</p>
+                                    <ul>
+                                        <li>DEPOSIT</li>
+                                        <span>Chinese, English, Japanese, Russian, Brazilian Portuguese.</span>
+                                    </ul>
+                                    <ul>
+                                        <li>WITHDRAW</li>
+                                        <span>Visa, MasterCard, Coinspaid (Bitcoin, Litecoin, Bitcoin Cash, Etherum,
+                                            Dogecoin, Tether) as well as local solutions.</span>
+                                    </ul>
+                                    <!-- <p class="info__text">Chinese, English, Japanese, Russian, Brazilian Portuguese.</p> -->
+                                </div>
+                                <div class="info__text-container">
+                                    <p class="info__title">RESTRICTED COUNTRIES</p>
+                                    <p class="info__text">United States of America, Greece, United Kingdom, Jersey,
+                                        Gibraltar, Spain, France and its overseas territories (Guadeloupe, Martinique,
+                                        French Guiana, Réunion, Mayotte, St. Martin, French Polynesia, Wallis and
+                                        Futuna, New Caledonia), The Netherlands, Sweden, Israel, Lithuania, Slovakia,
+                                        Dutch West Indies or Curacao to play at KOOLABETS. This includes both FIAT and
+                                        Cryptocurrencies.</p>
+                                </div>
+                                <div class="info__text-container">
+                                    <p class="info__title">CURRENCIES</p>
+                                    <p class="info__text">Australian dollars, Canadian Dollar, Euros, Norwegian kroner,
+                                        Russian rubles, US dollars, Polish złoty, New Zealand Dollar, Japanese Yen,
+                                        Bitcoin, Litecoin, Bitcoin Cash, Ethereum, Dogecoin, Tether.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__img-wrapper">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq__heading-wrapper d-flex justify-content-center align-items-center flex-column">
+                <h2 class="faq__title">FAQ</h2>
+                <span class="faq__subtitle">Have any questions? Please, look here!</span>
+            </div>
+
+            <div class="faq__section-wrapper d-flex">
+                <div class="faq__btn-wrapper d-flex flex-column align-items-end">
+                    <button type="button" class="faq-btn " id="btnGetStart">Getting Started</button>
+                    <button type="button" class="faq-btn secondary" id="btnCommision">Comissions</button>
+                </div>
+                <div class="faq__section" id="getStart">
+                    <div class="get_started" class="d-none">
+                        <div class="get_started__text-wrapper">
+                            <h4 class="get_started__title">WHAT IS BITSTARZ AFFILIATES?</h4>
+                            <p class="get_started__text">Koolabets.com is the first online Casino to offer wagering in
+                                both Euro and Bitcoins, with a great player experience and the best games around.
+                                Koolabets Affiliates is a program where we give you the opportunity to earn money every
+                                month simply by giving us the chance to welcome more players through our virtual doors.
+                            </p>
+                        </div>
+                        <div class="get_started__text-wrapper">
+                            <h4 class="get_started__title">CAN I STILL JOIN IF I DON'T HAVE A WEBSITE?</h4>
+                            <p class="get_started__text">Of course you can. We can give you all the marketing tools you
+                                will need to promote Koolabets offline or by skype/email.</p>
+                        </div>
+                        <div class="get_started__text-wrapper">
+                            <h4 class="get_started__title">HOW DO I JOIN?</h4>
+                            <p class="get_started__text">To join Koolabets Affiliates and start earning today, all you
+                                have to do is signup on our affiliate website. After having your account activated, you
+                                will be able to find a tracking link and reports.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq__section d-none" id="commissionFaq">
+                    <div class="commission-faq">
+                        <div class="commission-faq__text-wrapper">
+                            <h4 class="comission-faq__title">WHAT COMMISSION RATE DO YOU OFFER?</h4>
+                            <p class="comission-faq__text"> Koolabets.com is the high-quality user friendly gambling
+                                website offering its clients outstanding experience through hundreds of games and
+                                professional team. We offer wagering in both Euro and Bitcoins. Work with us and kill
+                                two birds with one stone - lead customers to our wonderful platform and make profits
+                                from it.</p>
+                        </div>
+                        <div class="commission-faq__text-wrapper">
+                            <h4 class="comission-faq__title">HOW MUCH DO I NEED TO PAY?</h4>
+                            <p class="comission-faq__text">It is free of charge.</p>
+                        </div>
+                        <div class="commission-faq__text-wrapper">
+                            <h4 class="comission-faq__title">HOW TO JOIN KOOLABETS AFFILIATES?</h4>
+                            <p class="comission-faq__text">You just need to sign up with us. Create and then activate
+                                your account here get your tracking link and start working.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section id="contact" class="contact-us">
+        <div class="container d-flex justify-content-center flex-column align-items-center">
+            <div class="contact-us__header d-flex justify-content-center flex-column align-items-center">
+                <h4 class="contact-us__title">CONTACT US</h4>
+                <span class="contact-us__subtitle sub">Got questions? Perfect! We’ve got answers.</span>
+                <div class="contact-per d-flex">
+                    <div class="contact-per__item ">
+                        <div class="contact-per__item-wrapper">
+                            <a href="#">
+                                <img src="assets/img/tg.png" alt="" class="contact-per__item-img">
+                                <span class="contact-per__item-name">@telegram.username</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-per__item">
+                        <div class="contact-per__item-wrapper">
+                            <a href="#">
+                                <img src="assets/img/Skype.png" alt="" class="contact-per__item-img">
+                                <span class="contact-per__item-name">@skype.username</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-us__form">
+                <form id="form-contact-us">
+                    <div class="contact-us__form-wrapper">
+                        <div class="contact-us__input-container">
+                            <div class="contact-us__input-name-email d-flex justify-content-between">
+                                <div class="form-group name">
+                                    <label>Full Name
+                                        <span style="color: #FFAC60">*</span>
+                                    </label>
+                                    <input type="name" class="form-control input-color" id="nameContUS"
+                                        aria-describedby="emailHelp" placeholder="Enter your name">
+                                    <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+                                    <small>Error</small>
+                                </div>
+                                <div class="form-group email">
+                                    <label>Contact email
+                                        <span style="color: #FFAC60">*</span>
+                                    </label>
+                                    <input type="email" class="form-control input-color" id="email1"
+                                        aria-describedby="emailHelp" placeholder="Enter your contact email"
+                                        pattern="^\S+@\S+\.\S+$">
+                                    <img id="errorImg" src="assets/img/error.svg" alt="" class="d-none">
+                                    <small>Error</small>
+
+                                </div>
+                            </div>
+                            <div class="contact-us__input-text">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1" class=" text-white">Your message</label>
+                                    <!-- <input class="form-control" type="text" placeholder="Enter your message" min="5"> -->
+                                    <textarea name="Your message" class="form-control input-color"
+                                        placeholder="Enter your message" id="exampleFormControlTextarea1" rows="5"
+                                        style="resize: none;"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex justify-content-center btn-contact-us">
+                        <button type="submit" class=" w-40 btn btn-primary btn-color " id="btn-contact-us">Send</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    <div class="modal-affiliate-program-terms d-none">
+        <div class="modal-affiliate-program-terms-wrapper">
+            <div class="modal-affiliate-program-terms-block">
+                <div class="modal-affiliate-wrapper">
+                    <span class="modal-affiliate-close"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
+                            <path
+                                d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                        </svg></span>
+                    <div class="modal__heading d-flex justify-content-center">
+                        <span>AFFILIATE PROGRAM TERMS & CONDITIONS</span>
+                    </div>
+
+                    <div class="modal__content">
+                        <h4>IMPORTANT - PLEASE READ THIS DOCUMENT CAREFULLY BEFORE ACCEPTING THIS AGREEMENT, THEN PRINT
+                            AND STORE ALONG WITH ALL CONFIRMATION EMAILS REFLECTING YOUR ACTIVITY.</h4>
+                        <p>To participate in BITSTARZ's affiliate network, you must accept these terms and conditions
+                            without modification. If you do not agree with these terms and conditions (or are not
+                            authorized to do so) you should not join the BitStarz affiliate network - also known as
+                            StarzPartners. General enquiries should be sent to support@bitstarz.com. If you have any
+                            questions regarding these terms and conditions please contact us at the same email address.
+                        </p>
+                        <h4>DEFINITIONS AND INTERPRETATION</h4>
+                        <p>“COMPANY”, “we”, “our”, “us” means BitStarz Affiliates (https://www.starzpartners.com) -
+                            “Company” which provides marketing services. Payment services are accomplished by Dama N.V.
+                            on behalf of starzpartners.com. "You", "your", and/or "affiliate" mean the individual or
+                            entity that has agreed to promote brands supported by COMPANY in return for bounties and/or
+                            commissions on the players that are referred to COMPANY in accordance with this agreement.
+                        </p>
+                        <p>"Affiliate account" refers to the uniquely assigned account created for an affiliate when
+                            they successfully register.</p>
+                        <p>"Affiliate area" means the area of the site that is accessible to you (you may need to access
+                            some parts of this area by logging on with the security code you are assigned by us when you
+                            sign-up as an affiliate in the affiliate network and associated password) and which provides
+                            certain 'member only' functionality, including facilities to check relevant statistics,
+                            manage campaigns, update your profile, create additional tracking links, manage tracking
+                            links and creative selection.</p>
+                        <p>"Affiliate earnings" mean any earnings that the affiliate accrues from activity on the
+                            players they have successfully referred to COMPANY as qualified acquisitions. Applicable
+                            commissions, bounties, and deficits are used to determine affiliate earnings.</p>
+                        <p>"Agreement" means these COMPANY affiliate network terms and conditions, applicable policies
+                            and such related promotion terms and conditions that may apply from time to time. You
+                            acknowledge and agree that COMPANY shall be entitled to amend this agreement (or any part
+                            thereof) from time to time, as it deems fit. The amended agreement shall take effect upon
+                            publication on the sites and affiliate area. COMPANY may, but shall not be obliged to notify
+                            you of such changes and as such, please check the sites and affiliate area, regularly for
+                            revisions.</p>
+                        <p>"Creatives" refer to any COMPANY-approved advertisement materials that can be used to promote
+                            COMPANY. These include but are not limited to banners, mailers, editorial columns, images,
+                            logos, photos, drawings, sketches, emails, splash pages, web pages, business cards, flyers,
+                            pamphlets, brochures, guides, booklets, inserts, fold-outs, magazines, videos, software,
+                            flash movies, podcasts, video podcasts and microsites.</p>
+                        <p>"Fraud traffic" means transactions, deposits, withdrawals, revenues or traffic generated on
+                            the services through illegal means or any other action committed in bad faith to defraud us
+                            (as determined by us in our sole discretion), regardless of whether or not it actually
+                            causes us harm, including transactions involving stolen credit/debit cards, collusion,
+                            manipulation of the service or system, bonuses or other promotional abuse, creation of false
+                            accounts for the purpose of generating affiliate earnings, and unauthorized use of any
+                            third-party accounts, copyrights, trademarks and other third party intellectual property
+                            rights (which, for the avoidance of doubt, includes our intellectual property rights).</p>
+                        <p>"Group" means COMPANY and the related companies of COMPANY collectively.</p>
+                        <p>"Handle" means a derivative of turnover, used by COMPANY, to calculate a player's activity on
+                            a particular product; the total money wagered by each player.</p>
+                        <p>"Intellectual property rights" means rights to all existing and future patents, trademarks,
+                            design rights, service marks, trade dress, trade or business names (including domain names),
+                            registered designs, copyright (including rights in computer software), moral rights,
+                            database rights, format rights and topography rights (whether or not any of these is or are
+                            registered and including applications for registration) know-how, trade secrets and rights
+                            of confidence and all rights and forms of protection throughout the world of a similar
+                            nature or with similar effect to any of these for the full unexpired period of any such
+                            rights and any extensions and/or renewals thereof.</p>
+                        <p>"Marketing materials" mean the creatives and any other marketing materials (which may include
+                            the marks) that have been provided or otherwise made available to you by us and/or
+                            pre-approved by us.</p>
+                        <p>"Marks" mean "COMPANY’s brand, logo, device, mark, domain name or trade name that contains,
+                            is confusingly similar to, or is comprised of the foregoing or any other name or mark owned
+                            or adopted from time to time by us or any company within the Group.</p>
+                        <p>"Net Revenue" means in relation to the casino: all monies received by BitStarz from customers
+                            in relation to casino activities less (a) monies paid out to customers as winnings, (b)
+                            bonuses and/or loyalty bonuses, (c) administration fees, (d) fraud costs, (e) charge-backs,
+                            (f) returned stakes (g) monies paid out as duties or taxes (h) jackpot contribution and (i)
+                            any commissions/fees due to third parties for providing/licensing games and/or games
+                            software.</p>
+                        <p>"Promotional code" means an alphanumeric code that is made available to the Affiliate to
+                            provide to prospective players.</p>
+                        <p>"Qualified acquisition" means a player that has met certain conditions to be considered a
+                            true value player. The criteria for qualification can be configured on a campaign basis and
+                            includes, but is not limited to, the following actions:</p>
+                        <ol>
+                            <li>First deposit amount (channel specific)</li>
+                            <li>Total deposit amount (channel specific)</li>
+                            <li>Total handle (channel specific)</li>
+                            <li>Minimum amount (product and channel specific)</li>
+                            <li>Handle amount (product and channel specific)</li>
+                            <li>Revenue amount (poker specific)</li>
+                        </ol>
+                        <p>"Site(s)" means any websites and any other online site or platform that is owned, operated or
+                            controlled by or on behalf of COMPANY from time to time.</p>
+                        <p>"Services" means the service(s) offered to players on the sites.</p>
+                        <p>"Spam" means any unsolicited email or other electronic communication that you send.</p>
+                        <p>"Term" means the period from the date that you acknowledge and accept the terms of this
+                            agreement by indicating such acceptance on the affiliate sign-up form, until such time as
+                            this agreement expires or is terminated.</p>
+                        <p>"Tier" means an affiliate's classification of how many first-time depositors he has secured.
+                        </p>
+                        <p>"Tracking link(s)" means tracker IDs and feeds (RSS), made available by us in the affiliate
+                            area and that you may use to connect players to our services from your website (or another
+                            electronic method) or using other marketing materials, for example promotional codes. When
+                            the relevant player opens his or her player account or keys in the applicable promotional
+                            code, our system automatically logs the tracking URL and records you as the referring
+                            affiliate.</p>
+                        <p>The clause headings are included for convenience only and shall not affect the interpretation
+                            of this agreement.</p>
+                        <p>Any phrase introduced by the terms "including", "include" or any similar expression shall be
+                            construed as illustrative and shall not limit the sense of the words prior to those terms.
+                        </p>
+                        <p>Any reference to "persons" includes natural persons, firms, partnerships, companies,
+                            corporations, associations, organizations, governments, states, governmental or state
+                            agencies, foundations and trusts (in each case whether or not having separate legal
+                            personality and irrespective of the jurisdiction in or under the law of which it was
+                            incorporated or exists).</p>
+                        <p>
+                            This agreement is drafted in the English language. If this agreement is translated into
+                            another language, the English language text shall in any event prevail.
+                        </p>
+                        <p>Any reference to a statute, statutory provision, ordinance, subordinate legislation, code or
+                            guideline ("legislation") is a reference to that legislation and all other subordinate
+                            legislation made under the relevant legislation as amended and in force from time to time
+                            and to any legislation that re-enacts or consolidates (with or without modification) any
+                            such legislation.</p>
+                        <h4>SIGNING UP AND REGISTRATION</h4>
+                        <p>In order to participate in the COMPANY affiliate network and enjoy the accompanying
+                            privileges and benefits, you must complete the appropriate affiliate sign-up form and be
+                            registered with us as an affiliate.</p>
+                        <p>You represent and undertake that all information supplied by you when registering and
+                            completing the affiliate sign-up form are accurate, true and complete in all respects. You
+                            shall also provide us with such other information as we may reasonably request from time to
+                            time. You acknowledge and agree that inaccurate, incomplete or inadequate information
+                            provided by you may cause the delay or retention of payment of applicable affiliate
+                            earnings.</p>
+                        <p>It is also your sole responsibility to ensure that the laws applicable to you do not prohibit
+                            you from participating in the COMPANY affiliate network and performing your obligations here
+                            under.</p>
+                        <p>We may require further evidence of identification to verify your application particulars. If
+                            there is any change to your registration details as originally supplied by you, you shall
+                            notify us of the relevant change without delay. In order to confirm your particulars,
+                            COMPANY reserves the right, inter alia, to confirm your particulars by any means available
+                            to us.</p>
+                        <p>COMPANY reserves the right, without liability to you, to reject your application without
+                            reference to you or assigning any reason thereto.</p>
+                        <p>Employees of COMPANY or its related corporations, partners, agents, contractors,
+                            representatives and suppliers (including their immediate family members, spouses, partners
+                            and housemates) are not eligible to participate in the COMPANY affiliate network.</p>
+                        <p>The affiliate program specifically promotes sites that do not handle EURO gambling by people
+                            resident in the United States of America; therefore you must ensure that your site does not
+                            target players in these countries.</p>
+                        <h4>COMPANY AFFILIATE OBLIGATIONS</h4>
+                        <p>We grant you the non-exclusive, non-assignable, right to direct players to the sites in
+                            accordance with the terms and conditions of this agreement.</p>
+                        <p>You shall ensure (and take adequate and appropriate measures to ensure) that the players
+                            referred by you to us are of the age of majority to participate in the services and that
+                            they shall comply with the COMPANY general terms and conditions.</p>
+                        <p>Referrals from affiliates are considered COMPANY players. The affiliate relinquishes all
+                            rights and/or ownership to these players once referred to COMPANY and these players shall be
+                            registered as COMPANY members before they are considered qualified acquisitions (subject to
+                            any other applicable criteria).</p>
+                        <p>You will be solely responsible for the development, operation, and maintenance of your site
+                            and for your own materials that appear on your site. For example, you will be solely
+                            responsible for ensuring that materials posted on your site are not libelous,
+                            discriminatory, defamatory, offensive or otherwise illegal. COMPANY disclaims all liability
+                            for these matters. Further, you will indemnify and hold us harmless from all claims,
+                            damages, and expenses (including, without limitation, legal fees) arising directly or
+                            indirectly out of the development, operation, maintenance, and contents of your site.</p>
+                        <p>The COMPANY affiliate network is intended for your direct participation. You shall not open
+                            affiliate accounts on behalf of third parties. Opening an affiliate account for third
+                            parties, brokering an affiliate account or the transfer of an affiliate account are
+                            prohibited. Affiliates wishing to transfer an affiliate account to another beneficial
+                            account owner must request in writing, approval from COMPANY.</p>
+                        <p>Approval is solely at COMPANY's discretion.</p>
+                        <h4>MARKETING & ADVERTISEMENTS</h4>
+                        <p>You will only use approved creatives and will not alter their appearance nor refer to us in
+                            any promotional materials other than those that are available from us.</p>
+                        <p>We hereby grant to you a non-exclusive, non-transferable license, during the term of this
+                            agreement, to use the marks and marketing materials solely in connection with the display of
+                            the promotional materials on your site pursuant to this agreement. This license cannot be
+                            sub-licensed, assigned or otherwise transferred by you.</p>
+                        <p>Your right to use the marks and marketing materials is limited to and arises only out of this
+                            license. You shall not assert the invalidity, unenforceability, or contest the ownership of
+                            the marks and marketing materials in any action or proceeding of whatever kind or nature,
+                            and shall not take any action that may prejudice our rights in the marks and marketing
+                            materials, render the same generic, or otherwise weaken their validity or diminish their
+                            associated goodwill.</p>
+                        <p>You agree that all use by you of the marks and marketing materials inures to our sole benefit
+                            and that you will not obtain any rights in the marks and marketing materials as a result of
+                            such use. You must notify us immediately if you become aware of the misuse of the marks and
+                            marketing materials by any third party.</p>
+                        <p>You shall not register or attempt to register any domain names, trademarks or names that
+                            contain, are confusingly similar to or are comprised of the marks and marketing materials,
+                            and you hereby agree to transfer any such registration obtained by you to us upon demand.”
+                        </p>
+                        <p>You shall not purchase or register keywords, search terms or other identifiers for use in any
+                            search engine, portal, sponsored advertising service or other search or referral service and
+                            which are identical or similar to any of the marks or variations thereof.</p>
+                        <p>For the avoidance of doubt, all intellectual property rights of COMPANY and the group shall
+                            remain the sole and exclusive property of the foregoing and you do not gain any rights to
+                            the foregoing by reason of your use of the same.</p>
+                        <p>All of your marketing activities must be professional, proper and lawful under applicable
+                            rules, regulations or laws (including any laws in relation to the content and nature of any
+                            advertising or marketing) and otherwise comply with the terms of this agreement. You shall
+                            not authorize, procure, assist or encourage any third party to:</p>
+                        <p>Place the marks and/or marketing materials on any online site or another medium where the
+                            content and/or material on such website or medium is potentially libellous, malicious,
+                            discriminatory, obscene, unlawful, sexually explicit, pornographic or violent or which is,
+                            in our sole discretion otherwise unsuitable.</p>
+                        <p>Develop and/or implement marketing and/or public relations strategies that have as their
+                            direct or indirect objective the targeting of marketing the sites, services or gaming in
+                            general to any persons who are less than 18 years of age (or such applicable age as may
+                            apply in the relevant jurisdiction), regardless of the age of majority in the location you
+                            are marketing.</p>
+                        <h4>INFRINGE ANY THIRD PARTY'S INTELLECTUAL PROPERTY RIGHTS.</h4>
+                        <p>Disparage us or otherwise damage our goodwill or reputation in any way.</p>
+                        <p>Copy or otherwise create a Site that substantially resembles the "look and feel "of the
+                            Sites, or promote a Site of this nature, whether in whole or in part, nor utilize any such
+                            means or Site to create the impression that such Sites are in fact the Sites (or any part of
+                            such).</p>
+                        <p>Frame any page of the Site(s) in whole or in part.</p>
+                        <p>Read, intercept, modify, record, redirect, interpret, or fill in the contents of any
+                            electronic form or other materials submitted to us by any other person.</p>
+                        <p>In any way alter, redirect or in any way interfere with the operation or accessibility of the
+                            sites or any page thereof or otherwise attempt to intercept or redirect (including via
+                            user-installed software) traffic from or on any online site or other places that participate
+                            in the COMPANY affiliate network.</p>
+                        <p>Take any action that could reasonably cause any end-user confusion as to our relationship
+                            with you or any third party, or as to the ownership or operation of the sites or services on
+                            which any functions or transactions are occurring.</p>
+                        <p>Attempt to communicate to players whether directly or indirectly on our sites to solicit them
+                            to move to any online site not owned by us or for other purposes without our prior approval
+                            including but not limited to via email, chat boards, or spamming our tables.</p>
+                        <p>Cause a betting pattern of any end-user that is indicative of abuse of the BITSTARZ affiliate
+                            network and associated remuneration structure, and is not consistent with the aims of the
+                            BITSTARZ affiliate network and good faith business opportunities offered therein.</p>
+                        <p>Without prejudice to anything else in this agreement, if we determine, in our sole
+                            discretion, that you have engaged in any of the foregoing activities, we may (without
+                            limiting any other rights or remedies available to us) withhold any affiliate earnings
+                            and/or terminate this agreement immediately on notice.</p>
+                        <p>Unless separately agreed otherwise, COMPANY will not, in any way, promote affiliates.</p>
+                        <p>For the avoidance of doubt, affiliates are responsible for all costs associated with their
+                            marketing and advertising obligations under this agreement.</p>
+                        <p>Without prejudice, we reserve the right to terminate this agreement with you immediately
+                            without liability if there is any form of spamming originating from you or if you advertise
+                            our services in any other way than in accordance with or permitted by the terms of this
+                            agreement.</p>
+                        <p>You may only offer bonuses and promotions to players on the COMPANY's behalf that are
+                            authorized and sanctioned by the COMPANY, where you have an obligation to ensure that the
+                            COMPANY's promotion/bonus header and terms and conditions for these bonuses and promotions
+                            use COMPANY’s prescribed wording and are communicated and specified in any publication of
+                            the same on your site, email or other media. Where there is a discrepancy between the terms
+                            communicated in your offering of the bonus or promotion and the terms specified to you by
+                            the COMPANY, then the COMPANY shall be entitled to recover by the way of setting off any
+                            commission owed to you or other means, the loss suffered by the COMPANY as a result of your
+                            non-compliance.
+
+                        </p>
+                        <h4>AFFILIATE EARNINGS & PAYMENTS</h4>
+                        <p>Please take note that credit shall not be issued to any affiliate.</p>
+                        <p>On joining this affiliate program your account will be set to our default commission of 25%
+                            of "Net Revenue" - rising to 40% based upon your performance. The commission percentage
+                            received will be based upon the NGR KPI as follows:</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container footer-wrapper d-flex align-items-center justify-content-between">
+            <div class="footer_img">
+                <img src="assets/img/Group59.png" alt="">
+            </div>
+            <div class="footer_info">
+                <span>©2023. Koolabet Affiliates. All rights reserved.</span>
+            </div>
+            <div class="footer_terms">
+                <!-- <a href="#"></a> -->
+                <span class="commission-cta__link">TERMS&CONDITIONS</span>
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="assets/js/customSelect.js"></script>
+    <script src="assets/js/val.js"></script>
+    <!-- <script src="assets/js/validation.js"></script> -->
+
+
+    <!-- <script type="text/javascript">
+        const tel = document.querySelector('#tel'),
+        el = document.querySelector('.span');
+        let reg = /[A-Za-zA-Яа-яЁё]/g;
+        tel.oninput = function(){
+            this.value = this.value.replace(reg, '')
+        }
+    </script> -->
+</body>
+
+</html>
