@@ -611,12 +611,12 @@ header .container {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: url(../img/eye.svg) 0 0 no-repeat;
+  background: url(../img/eye-closed.svg) 0 0 no-repeat;
 }
 
 .password-control.view {
   top: 36%;
-  background: url(../img/eye-closed.svg) 0 0 no-repeat;
+  background: url(../img/eye.svg) 0 0 no-repeat;
 }
 
 .form-check-input:checked {
@@ -794,9 +794,12 @@ header .container {
 .affiliate-actions-container_block .affiliate-actions-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 312px;
+}
+.affiliate-actions-container_block .affiliate-actions-container__info {
+  text-align: center;
 }
 
 .affiliate-actions-container__modal {
