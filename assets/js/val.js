@@ -53,10 +53,11 @@ function show_hide_password(target){
     let inputShow = target.parentElement.querySelector('input');
     if(inputShow.getAttribute('type') == 'password'){
         target.classList.add('view');
+        
         inputShow.setAttribute('type', 'text');
     }else {
-        	target.classList.remove('view');
-        	inputShow.setAttribute('type', 'password');
+        target.classList.remove('view');
+        inputShow.setAttribute('type', 'password');
         }
 }
 
