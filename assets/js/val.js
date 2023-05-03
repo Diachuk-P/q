@@ -46,20 +46,23 @@ function showError(input, message) {
 
 }
 
-
+const showPassword = document.getElementById('show_password');
 // password show
 
 function show_hide_password(target){
-	if (password.getAttribute('type') == 'password') {
-		target.classList.add('view');
-		password.setAttribute('type', 'text');
-	} else {
-		target.classList.remove('view');
-		password.setAttribute('type', 'password');
-	}
-	return false;
+    let inputShow = target.parentElement.querySelector('input');
+    if(inputShow.getAttribute('type') == 'password'){
+        target.classList.add('view');
+        inputShow.setAttribute('type', 'text');
+    }else {
+        	target.classList.remove('view');
+        	inputShow.setAttribute('type', 'password');
+        }
 }
 
+showPassword.addEventListener('click', () => {
+    show_hide_password(showPassword)
+})
 
 function checkCheckbox(input){
     if (input.checked === false) {
